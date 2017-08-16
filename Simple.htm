@@ -1,0 +1,168 @@
+<!-- <!DOCTYPE html> -->
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="js video no-maskImage placeholder" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Time Series Analysis</title>
+  <meta name="author" content="Novus Partners">
+
+  
+  <meta name="description" content="Complete Charts Simple Line Scatter / Bubble Stacked / Stream / Expanded Area Discrete Bar Grouped / Stacked Multi-Bar Horizontal Grouped Bar Line …">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  <link rel="canonical" href="http://nvd3.org//examples/line.html">
+  <link href="http://nvd3.org/favicon.png" rel="icon">
+  <link href="Simple%20Line%20Chart%20-%20NVD3_files/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+   <script src="Simple%20Line%20Chart%20-%20NVD3_files/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="Simple%20Line%20Chart%20-%20NVD3_files/css_002.css" rel="stylesheet" type="text/css">
+<link href="Simple%20Line%20Chart%20-%20NVD3_files/css.css" rel="stylesheet" type="text/css">
+
+    <link href="Simple%20Line%20Chart%20-%20NVD3_files/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 43px;
+      }
+      .statement_para {
+          font-size: 14pt;
+          line-height: 120%;
+          width: 60%;
+          text-align: justify;
+          text-justify: distribute;
+          margin: 10px auto;
+          margin-bottom: 30px;
+      }
+
+      .row {
+        margin 1%;
+      }
+
+      article {
+        padding: 0 1%;
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+
+      body > .container {
+        width: 941px;
+      }
+	   .value, .key {
+		   font-size:11px;
+	   }
+	   #sidebar{
+		   overflow-x:auto;
+	   }
+	   h5 {
+		   margin-left:100px;
+	   }
+      @media(min-width: 1200px){
+        body > .container {
+          width: 1171px;
+        }
+      }
+
+      @media (max-width: 979px) and (min-width: 768px) {
+        body > .container {
+          width: 725px;
+        }
+      }
+
+    </style>
+    <link href="Simple%20Line%20Chart%20-%20NVD3_files/common.css" rel="stylesheet">
+    <link href="Simple%20Line%20Chart%20-%20NVD3_files/nv.css" rel="stylesheet">
+
+    <script src="Simple%20Line%20Chart%20-%20NVD3_files/bootstrap.js"></script>
+<script src="Simple%20Line%20Chart%20-%20NVD3_files/d3.min.js"></script>
+<script src="Simple%20Line%20Chart%20-%20NVD3_files/nv.d3.min.js"></script>
+  <script src="Simple Line Chart - NVD3_files/data.js" type="text/javascript"></script>
+  
+
+
+  
+
+
+<script src="Simple%20Line%20Chart%20-%20NVD3_files/widgets.js" async type="text/javascript"></script></head>
+
+<body>
+
+    <div class="container with-3d-shadow with-transitions">
+              <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="row">
+        <div class="span3">
+        <div class="well" id="sidebar">
+            <h4 class="nav-header">
+            Statistics
+            </h4>
+            <table class="table table-striped" >
+             <tr><td><h4 class="text-info"> Statistics Currently Not Available</h4>
+            	</td></tr>
+            </table>
+             </div>
+
+        </div>
+
+        <div class="span9">
+                      <h2 id="simple_line_chart"> <center>Time Series Analysis </center></h2>
+		<div id="chart">
+        <svg>
+		</svg>
+        </div>
+        			<h5> <center>Fig.1 - RunHistory Of Job (TimeSeries)</center></h5>
+		<div id="chart1">
+        <svg>
+		</svg>
+        </div>
+        			<h5> <center>Fig.2 - Daily Status Of Job </center></h5>
+		<div id="pattern">
+        <svg>
+		</svg>
+        </div>
+        			<h5> <center>Fig.3 - Temporal patterns Extracted from Run History </center></h5>		
+        <div id="barchart1">
+        <svg>
+		</svg>
+        </div>
+         			<h5> <center>Fig.4 - DayWise Status of Job (Part 1) </center></h5>
+        <div id="barchart2">
+        <svg>
+		</svg>
+        </div>
+         			<h5> <center>Fig.5 - DayWise Status of Job (Part 2)</center></h5>   
+        <div id="forecast">
+        <svg>
+		</svg>
+        </div>
+       			<h5> <center>Fig.6 - Forecasting based on Past History </center></h5>   
+  
+<!--<script src="Simple%20Line%20Chart%20-%20NVD3_files/line.js" type="text/javascript"> </script>
+-->
+
+
+        </div>
+      </div>
+
+      <hr>
+
+
+
+        <footer role="contentinfo"><p>
+  <!--Copyright © 2014 - <a href="http://www.novus.com/">Novus Partners</a> -
+  <span class="credit">Powered by <a href="http://octopress.org/">Octopress</a></span>
+--></p>
+
+</footer>
+
+    </div>
+	<script type="text/javascript" src="Simple Line Chart - NVD3_files/barcharts.js"></script>
+	<script type="text/javascript" src="Simple Line Chart - NVD3_files/temporal_patterns.js"></script>
+    <script type="text/javascript" src="Simple Line Chart - NVD3_files/sidebar.js"></script>
+</body></html>
